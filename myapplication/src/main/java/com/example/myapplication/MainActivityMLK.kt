@@ -32,11 +32,11 @@ class MainActivityMLK : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView = findViewById(R.id.rvLabels)
+        recyclerView = findViewById(R.id.tvLabel)
         manager = LinearLayoutManager(this)
 
         // Click listener set on Button to launch camera activity
-        findViewById<FloatingActionButton>(R.id.fabCapture).setOnClickListener {
+        findViewById<FloatingActionButton>(R.id.button3).setOnClickListener {
             dispatchTakePictureIntent(REQUEST_IMAGE_CAPTURE)
         }
     }
@@ -86,7 +86,7 @@ class MainActivityMLK : AppCompatActivity() {
                 }
 
             // Bind Bitmap image to ImageView
-            findViewById<ImageView>(R.id.ivImage).setImageBitmap(imageBitmap)
+            findViewById<ImageView>(R.id.capturedImage).setImageBitmap(imageBitmap)
         }
     }
 }
